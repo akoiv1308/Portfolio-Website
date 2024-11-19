@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Alex Koiv</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <div class="nav-container">
+      <div class="burger-menu">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+          <span></span>
+        </label>
+        <ul class="nav-links">
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#professional-experience">Professional Experience</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-initials">
+        <a href="#">AK</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Me Section -->
+  <section id="about-me" class="about-me section">
+    <div class="left-side">
+      <h1>I am a <span id="changing-text">Student</span></h1>
+      <p>
+        Welcome to my professional website! I'm Alex Koiv, and I am passionate about technology and eager to learn and
+        grow. I would love
+        to connect with you and explore potential professional opportunities.
+      </p>
+    </div>
+    <div class="right-side">
+      <div class="image-container">
+        <img src="assets/AlexK.jpg" alt="Headshot Photo">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Background Section -->
+  <section class="background-section section">
+    <div class="window-header">
+      <span class="red-dot"></span>
+      <span class="yellow-dot"></span>
+      <span class="green-dot"></span>
+    </div>
+    <div class="window-content">
+      <div class="left-side">
+        <img src="assets/benny.jpg" alt="Logo" class="logo-image">
+        <p>
+          I'm currently a student pursuing a Bachelor's degree in Computer Science at Cornell University. I have a wide
+          range of experience in software engineering from full-stack web development to network engineering. In my free
+          time, I enjoy taking pictures of the nature, exploring new cuisines, and
+          hiking!
+        </p>
+        <a class="resume-button"
+          href="https://drive.google.com/file/d/1aSkt9y1nUAvuTBJYD548RmcCjyyu75W5/view?usp=sharing"
+          target="_blank">Download
+          Resume</a>
+      </div>
+      <div class="right-side collage">
+        <img src="assets/2.jpg" alt="Image 1" class="img1">
+        <img src="assets/italy.jpg" alt="Image 2" class="img2">
+        <img src="assets/creek.jpg" alt="Image 3" class="img3">
+        <img src="assets/IMG_0922.jpg" alt="Image 4" class="img4">
+        <img src="assets/welding.jpg" alt="Image 5" class="img5">
+        <img src="assets/_DSC6295.JPG" alt="Image 6" class="img6">
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section Title -->
+  <h2 id="projects" class="section-title">Projects</h2>
+  <br>
+  <p class="section-subtitle">Here are some of the projects I've worked on recently.</p>
+
+  <!-- Projects Section -->
+  <section class="projects-section section">
+    <!-- Project Card 1 -->
+    <div class="project-card">
+      <div class="window-header">
+        <span class="red-dot"></span>
+        <span class="yellow-dot"></span>
+        <span class="green-dot"></span>
+      </div>
+      <div class="project-content">
+        <img src="assets/skill.png" alt="Aptitude Test Suite" class="project-logo icon-white">
+        <h3 class="project-title">Aptitude Test Suite</h3>
+        <p class="project-description">
+          A suite of games for evaluating cognitive skills and problem-solving abilities.
+        </p>
+        <a href="https://github.coecis.cornell.edu/Lambda-Plunderbund/final_project" class="learn-more">
+          Learn More <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="project-card">
+      <div class="window-header">
+        <span class="red-dot"></span>
+        <span class="yellow-dot"></span>
+        <span class="green-dot"></span>
+      </div>
+      <div class="project-content">
+        <img src="assets/presentation_3073510.png" alt="Steel Bridge Website" class="project-logo icon-white">
+        <h3 class="project-title">Steel Bridge Website</h3>
+        <p class="project-description">
+          Revamped the entire website for Cornell Steel Bridge Project Team.
+        </p>
+        <a href="https://github.coecis.cornell.edu/ak953/steel_bridge_2023" class="learn-more">
+          Learn More <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="project-card">
+      <div class="window-header">
+        <span class="red-dot"></span>
+        <span class="yellow-dot"></span>
+        <span class="green-dot"></span>
+      </div>
+      <div class="project-content">
+        <img src="assets/web-design.png" alt="Lynah Lunacy" class="project-logo icon-white">
+        <h3 class="project-title">Lynah Lunacy</h3>
+        <p class="project-description">
+          A mini-game for Computer Graphics class that mimics GamePigeon's Knockout game.
+        </p>
+        <a href="https://github.com/yourusername/lynah-lunacy" class="learn-more">
+          Learn More <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience Section Title -->
+  <h2 id="professional-experience" class="section-title">Professional Experience</h2>
+  <br>
+  <p class="section-subtitle">Here are some of my professional highlights.</p>
+
+  <!-- Professional Experience Section with Carousel -->
+  <section class="professional-experience section">
+    <div class="carousel-container">
+      <input type="radio" name="slider" id="item-1" checked>
+      <input type="radio" name="slider" id="item-2">
+      <input type="radio" name="slider" id="item-3">
+
+      <div class="cards">
+        <label class="card" for="item-1" id="experience-1">
+          <img src="assets/bny_image.jpg" alt="Experience 1">
+        </label>
+        <label class="card" for="item-2" id="experience-2">
+          <img src="assets/nbc.JPG" alt="Experience 2">
+        </label>
+        <label class="card" for="item-3" id="experience-3">
+          <img src="assets/codecademy_image.jpg" alt="Experience 3">
+        </label>
+      </div>
+
+      <div class="details">
+        <div class="detail" id="detail-1">
+          <h3>Software Developer Intern</h3>
+          <p>BNY Mellon</p>
+          <br>
+          <p>Developed a full-stack web application for keeping track of various network requests.</p>
+          <div class="experience-icons">
+            <img src="assets/js.png" alt="JavaScript">
+            <img src="assets/python.png" alt="Python" class="icon-white">
+            <img src="assets/sql.png" alt="SQL" class="icon-white">
+          </div>
+        </div>
+        <div class="detail" id="detail-2">
+          <h3>Network Engineering Intern</h3>
+          <p>NBCUniversal</p>
+          <br>
+          <p>Implemented network monitoring tools to quickly identify areas of concern.</p>
+          <div class="experience-icons">
+            <img src="assets/postgre.png" alt="PostgreSQL" class="icon">
+            <img src="assets/web-development.png" alt="Web Development" class="icon-white">
+            <img src="assets/google-apps-script.png" alt="Google Apps Script" class="icon-white">
+          </div>
+        </div>
+        <div class="detail" id="detail-3">
+          <h3>Curriculum Development Intern</h3>
+          <p>Codecademy</p>
+          <br>
+          <p>Compiled a curriculum for a JavaScript module on Sets.</p>
+          <div class="experience-icons">
+            <img src="assets/typescript.png" alt="TypeScript" class="icon">
+            <img src="assets/azure.png" alt="Azure" class="icon-white">
+            <img src="assets/web.png" alt="Web Technologies" class="icon-white">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards Section Title -->
+  <h2 id="awards" class="section-title">
+    Awards
+  </h2>
+  <br>
+  <p class="section-subtitle">Some of my accomplishments over the past few years.</p>
+
+  <!-- Awards Section -->
+  <section class="awards-section section">
+    <div class="window-header">
+      <span class="red-dot"></span>
+      <span class="yellow-dot"></span>
+      <span class="green-dot"></span>
+    </div>
+    <div class="window-content">
+      <div class="awards-content">
+        <!-- Award entries -->
+        <div class="award-box">
+          <img src="assets/education_6850687.png" alt="Award Logo 1" class="award-logo icon-white">
+          <div class="award-text">
+            <h4>The New York Times Scholarship</h4>
+            <p>Awarded for academic achievement and leadership skills.</p>
+          </div>
+        </div>
+        <div class="award-box">
+          <img src="assets/data-science.png" alt="Award Logo 2" class="award-logo icon-white">
+          <div class="award-text">
+            <h4>Data Science Fellowship</h4>
+            <p>Attained foundational machine learning and data science skills.</p>
+          </div>
+        </div>
+        <div class="award-box">
+          <img src="assets/leadership.png" alt="Award Logo 3" class="award-logo icon-white">
+          <div class="award-text">
+            <h4>Accredited Leader Coach</h4>
+            <p>Certified to coach and mentor aspiring leaders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section Title -->
+  <h2 id="skills" class="section-title">
+    Skills
+  </h2>
+  <br>
+  <p class="section-subtitle">Overview of my technical expertise and soft skills.</p>
+  <br>
+
+  <!-- Skills Section -->
+  <section class="skills-section section">
+    <div class="centered-content">
+      <!-- Circle Progress Bars -->
+      <div class="skills">
+        <div class="skill">
+          <div class="circle" data-percentage="70"></div>
+          <p>Adaptability</p>
+        </div>
+        <div class="skill">
+          <div class="circle" data-percentage="75"></div>
+          <p>Problem Solving</p>
+        </div>
+        <div class="skill">
+          <div class="circle" data-percentage="80"></div>
+          <p>HTML/CSS/JS</p>
+        </div>
+        <div class="skill">
+          <div class="circle" data-percentage="85"></div>
+          <p>Python</p>
+        </div>
+        <div class="skill">
+          <div class="circle" data-percentage="90"></div>
+          <p>Java</p>
+        </div>
+        <div class="skill">
+          <div class="circle" data-percentage="95"></div>
+          <p>Communication</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h2 id="video" class="section-title">
+    Video Highlights
+  </h2>
+
+  <section class="video-section section">
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/yw2FwQ0X0Gs?si=RU0U-JEE_OUpHPb0&start=2700"
+        title="YouTube video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Contact Section Title -->
+  <h2 id="contact" class="section-title">
+    Contact
+  </h2>
+
+  <!-- Contact Section -->
+  <section class="contact-section section">
+    <div class="contact-content">
+      <p>Please reach out to me via email or connect with me on social media.</p>
+      <p>Email: <a href="mailto:alex.koiv41@gmail.com">alex.koiv41@gmail.com</a></p>
+      <!-- Social Media Icons -->
+      <div class="footer-icons">
+        <a href="https://github.com/akoiv1308" target="_blank"><img src="assets/social.png" alt="GitHub"
+            class="icon-white"></a>
+        <a href="https://www.linkedin.com/in/alex-koiv/" target="_blank"><img src="assets/linkedin.png" alt="LinkedIn"
+            class="icon-white"></a>
+        <a href="https://instagram.com/alexkoiv" target="_blank"><img src="assets/instagram.png" alt="Instagram"
+            class="icon-white"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <p>&copy; 2024 Alex Koiv</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top"><span>&uarr;</span></a>
+
+  <!-- JavaScript for Interactive Elements -->
+  <script src="script.js"></script>
+</body>
+
+</html>

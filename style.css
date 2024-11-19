@@ -1,4 +1,4 @@
-/* IBM Plex Sans Import Link */
+/* IBM Plex Sans */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
 /* Global Styles */
@@ -685,8 +685,7 @@ body {
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 aspect ratio */
+  padding-bottom: 50%;
   height: 0;
   overflow: hidden;
   max-width: 100%;

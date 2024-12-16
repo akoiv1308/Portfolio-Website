@@ -1,70 +1,71 @@
-const texts = ["Student", "Developer", "Video Technician"];
+const texts = ["Student", "Developer"];
 let count = 0;
 const changingText = document.getElementById('changing-text');
 
-setInterval(() => {
-  changingText.textContent = texts[count];
-  changingText.style.animation = 'none';
-  changingText.offsetHeight;
-  changingText.style.animation = null;
-  count = (count + 1) % texts.length;
-}, 2000);
+if (changingText) {
+  setInterval(() => {
+    changingText.textContent = texts[count];
+    changingText.style.animation = 'none';
+    changingText.offsetHeight;
+    changingText.style.animation = null;
+    count = (count + 1) % texts.length;
+  }, 2000);
+}
 
-const sections = document.querySelectorAll('.section');
-
-const options = {
-  threshold: 0.1
-};
-
-const observer = new IntersectionObserver(function (entries) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+// Scroll-up button
+const backToTop = document.querySelector('.back-to-top');
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.style.display = 'flex';
+    } else {
+      backToTop.style.display = 'none';
     }
   });
-}, options);
+}
 
-sections.forEach(section => {
-  observer.observe(section);
-});
+// Carousel arrows 
+const imageCarousel = document.querySelector('.image-carousel');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
 
-document.querySelectorAll('.circle').forEach(circle => {
-  let percentage = circle.getAttribute('data-percentage');
-  let canvas = document.createElement('canvas');
-  canvas.width = 100;
-  canvas.height = 100;
-  circle.appendChild(canvas);
-  let context = canvas.getContext('2d');
-  let start = -0.5 * Math.PI;
-  let end = start + (percentage / 100) * 2 * Math.PI;
-
-  let color;
-  if (percentage >= 70) {
-    color = '#00CA4E';
-  }
-
-  // Background circle
-  context.beginPath();
-  context.arc(50, 50, 45, 0, 2 * Math.PI);
-  context.strokeStyle = '#ccc';
-  context.lineWidth = 10;
-  context.stroke();
-
-  // Foreground circle
-  context.beginPath();
-  context.arc(50, 50, 45, start, end);
-  context.strokeStyle = color;
-  context.lineWidth = 10;
-  context.stroke();
-});
-
-// Back to Top Button Functionality
-const backToTopButton = document.querySelector('.back-to-top');
-
-backToTopButton.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+if (imageCarousel && leftArrow && rightArrow) {
+  leftArrow.addEventListener('click', () => {
+    imageCarousel.scrollBy({ left: -200, behavior: 'smooth' });
   });
+
+  rightArrow.addEventListener('click', () => {
+    imageCarousel.scrollBy({ left: 200, behavior: 'smooth' });
+  });
+}
+
+// Experience carousel
+const carousels = document.querySelectorAll('.opposite-carousel');
+carousels.forEach(carousel => {
+  const imagesWrapper = carousel.querySelector('.carousel-images');
+
+  const images = imagesWrapper.querySelectorAll('img');
+  let currentIndex = 0;
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    const offset = -currentIndex * 100;
+    imagesWrapper.style.transform = `translateX(${offset}%)`;
+  }, 3000);
 });
+
+// Project carousel
+const project_carousels = document.querySelectorAll('.project-carousel');
+project_carousels.forEach(carousel => {
+  const imagesWrapper = carousel.querySelector('.project-carousel-images');
+  const images = imagesWrapper.querySelectorAll('img');
+  let currentIndex = 0;
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    const offset = -currentIndex * 50;
+    imagesWrapper.style.transform = `translateX(${offset}%)`;
+  }, 4500);
+});
+
+
